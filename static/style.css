@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Sansation Light V1";
+  src: url("https://db.onlinewebfonts.com/t/7fd474bdd402506012409c78a7dc8ef4.eot");
+  src: url("https://db.onlinewebfonts.com/t/7fd474bdd402506012409c78a7dc8ef4.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/7fd474bdd402506012409c78a7dc8ef4.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/7fd474bdd402506012409c78a7dc8ef4.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/7fd474bdd402506012409c78a7dc8ef4.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/7fd474bdd402506012409c78a7dc8ef4.svg#Sansation Light V1")format("svg");
+}
+
+@font-face {
+  font-family: "Sansation Bold";
+  src: url("https://db.onlinewebfonts.com/t/a95ede42168248621cd7c0bcc5e9dd6c.eot");
+  src: url("https://db.onlinewebfonts.com/t/a95ede42168248621cd7c0bcc5e9dd6c.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/a95ede42168248621cd7c0bcc5e9dd6c.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/a95ede42168248621cd7c0bcc5e9dd6c.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/a95ede42168248621cd7c0bcc5e9dd6c.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/a95ede42168248621cd7c0bcc5e9dd6c.svg#Sansation Bold")format("svg");
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: "Sansation Bold";
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: "Sansation Light V1";
+  color: #666;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-family: "Sansation Light V1";
+}
+
+form {
+  margin: 20px auto;
+  text-align: center;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.image-wrapper img {
+  max-width: 400px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper h2 {
+  display: block;
+  margin-top: 10px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Deblurring Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>Motion Deblurring</h1>
+    <p>Upload an image to deblur it.</p>
+    <form action="" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*">
+      <input type="submit" value="Deblur">
+    </form>
+    <div class="image-container">
+      {% if uploaded_image_base64 and deblurred_image_base64 %}
+        <div class="image-wrapper">
+          <img src="{{ uploaded_image_base64 }}" alt="Uploaded Image">
+          <h2>Uploaded Image</h2>
+        </div>
+        <div class="image-wrapper">
+          <img src="{{ deblurred_image_base64 }}" alt="Deblurred Image">
+          <h2>Deblurred Image</h2>
+        </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
