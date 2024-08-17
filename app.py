@@ -28,8 +28,8 @@ def deblur(model, input, original_size):
     return deblurred_resized
 
 def main():
-    st.markdown("<h1 style='text-align: center; font-family: Sansation, sans-serif; font-weight: 700;'>Motion Deblurring</h1>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; font-family: Sansation, sans-serif; font-weight: 300;'>Upload an image to deblur it</p>", unsafe_allow_html=True)
+    st.markdown("<h1 style='font-family: Sansation, sans-serif; font-weight: 700;'>Motion Deblurring</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='font-family: Sansation, sans-serif; font-weight: 300;'>Upload an image to deblur it</p>", unsafe_allow_html=True)
 
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
     if uploaded_file is not None:
