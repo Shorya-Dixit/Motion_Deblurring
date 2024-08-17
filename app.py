@@ -6,7 +6,8 @@ from generator import generator_model
 
 # Loading GAN model
 model=generator_model()
-model.load_weights(r"weights\generator.h5")
+model.load_weights(r"weights/generator.h5")
+
 
              
 def deblur(model, input, original_size):
