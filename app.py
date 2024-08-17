@@ -4,13 +4,6 @@ from PIL import Image
 import cv2
 from generator import generator_model 
 
-# Import font families
-st.markdown("""
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Sansation:wght@300;700&display=swap');
-    </style>
-""", unsafe_allow_html=True)
-
 # Loading GAN model
 model=generator_model()
 model.load_weights(r"weights/generator.h5")
@@ -29,7 +22,7 @@ def deblur(model, input, original_size):
 
 def main():
     st.title("Motion Deblurring")
-    st.write("Upload an image to deblur it.")
+    st.write("Upload an image to deblur it")
 
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
     if uploaded_file is not None:
