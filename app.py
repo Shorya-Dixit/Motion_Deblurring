@@ -28,20 +28,19 @@ def deblur(model, input, original_size):
     return deblurred_resized
 
 def main():
-    st.markdown("<h1 style='text-align: center; font-family: 'Sansation', sans-serif; font-weight: 700;'>Motion Deblurring</h1>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; font-family: 'Sansation', sans-serif; font-weight: 300;'>Upload an image to deblur it.</p>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; font-family: Sansation, sans-serif; font-weight: 700;'>Motion Deblurring</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; font-family: Sansation, sans-serif; font-weight: 300;'>Upload an image to deblur it</p>", unsafe_allow_html=True)
 
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
-        original_size = image.size  
+        original_size = image.size  # Save the original size
         st.image(image, caption='Uploaded Image.', use_column_width=True)
+        st.write("")
         st.write("Deblurring...")
+        
         deblurred_image = deblur(model, image, original_size)
-        # Create two columns
-        col1, col2 = st.columns(2)
-        col1.image(image, caption='Uploaded Image.', use_column_width=True)
-        col2.image(deblurred_image, caption='Deblurred Image.', use_column_width=True)
+        st.image(deblurred_image, caption='Deblurred Image.', use_column_width=True)
 
 if __name__ == "__main__":
     main()
